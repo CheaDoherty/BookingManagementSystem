@@ -25,7 +25,7 @@ public class BookingService : IBookingService
         return await _context.Bookings.ToListAsync();
     }
 
-    public async Task<IEnumerable<Booking>> GetBookingsByUserId(Guid userId)
+    public async Task<IEnumerable<Booking>> GetBookingsByUserId(string userId)
     {
         return await _context.Bookings.Where(b => b.UserId == userId).ToListAsync();
     }
